@@ -54,6 +54,7 @@
         </div>
 
         <?php
+        if(isset($_POST['start_date']) && !empty($_POST['start_date'])) {
         $start_date = date('Y-m-d', strtotime($_POST['start_date']));
         $end_date = date('Y-m-d', strtotime($_POST['end_date']));
 
@@ -143,6 +144,7 @@
         <!-- START - Footer -->
         <!-- END - Footer -->
         <?php
+        }
 
         function std_deviation($my_arr) {
             $no_element = count($my_arr);
